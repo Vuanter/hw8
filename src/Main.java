@@ -3,7 +3,7 @@ import java.time.LocalDateTime;
 
 public class Main {
 
-    public static void printSeparator(int yearCurrent) {
+    private static void printSeparator(int yearCurrent) {
         if ((yearCurrent % 4 == 0 && yearCurrent % 100 != 0) || (yearCurrent % 400 == 0)) {
             System.out.println("Год високосный");
         }else{
@@ -12,7 +12,7 @@ public class Main {
     }
 
 
-    public static void printClient (int currentOs, int currentYear) {
+    private static void printClient (int currentOs, int currentYear) {
         if (currentOs == 0 && currentYear < LocalDate.now().getYear()) {
             System.out.println("Установите lite-версию ios");
         }else if (currentOs == 0 && currentYear == LocalDate.now().getYear()){
@@ -24,7 +24,7 @@ public class Main {
         }
     }
 
-    public static int currentDistance (int deliveryDistance) {
+    private static int currentDistance (int deliveryDistance) {
 
         int days = 0;
 
