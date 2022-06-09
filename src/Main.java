@@ -24,14 +24,18 @@ public class Main {
         }
     }
 
-    public static void printDistance (int deliveryDistance, int days) {
+    public static int currentDistance (int deliveryDistance) {
+
+        int days = 0;
+
         if (deliveryDistance <= 20)
             days = 1;
         if (deliveryDistance >= 20 && deliveryDistance <= 60)
             days = 2;
         if (deliveryDistance >= 60 && deliveryDistance <= 100)
             days = 3;
-        System.out.println("Потребуется дней " + days);
+
+        return days;
     }
 
     public static void main(String[] args) {
@@ -71,7 +75,9 @@ public class Main {
 // Наша задача — доработать код, а именно написать метод, который на вход принимает дистанцию и возвращает итоговое количество дней доставки.
 
         int deliveryDistance = 95;
-        int days = 0;
-        printDistance(deliveryDistance, days);
+
+        int total = currentDistance(deliveryDistance);
+        System.out.println("Потребуется дней " + total);
+
     }
 }
